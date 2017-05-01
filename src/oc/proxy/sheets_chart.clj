@@ -4,7 +4,7 @@
             [oc.lib.proxy.sheets-chart :as sheets-chart]))
 
 (defn- sheets-chart-proxy [sheet-id request]
-  (sheets-chart/proxy-sheets (str "/spreadsheets/d/" sheet-id) (:query-params request)))
+  (sheets-chart/proxy-sheets (str "/spreadsheets/d/" sheet-id "/pubchart") (:query-params request)))
 
 ;; ----- Routes -----
 
