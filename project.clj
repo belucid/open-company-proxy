@@ -1,4 +1,4 @@
-(defproject open-company-api "0.1.0-SNAPSHOT"
+(defproject open-company-proxy "0.1.0-SNAPSHOT"
   :description "OpenCompany Proxy Service"
   :url "https://opencompany.com/"
   :license {
