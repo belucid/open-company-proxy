@@ -1,8 +1,7 @@
 (ns oc.proxy.components
   (:require [com.stuartsierra.component :as component]
             [taoensso.timbre :as timbre]
-            [org.httpkit.server :as httpkit]
-            [oc.proxy.config :as c]))
+            [org.httpkit.server :as httpkit]))
 
 (defrecord HttpKit [options handler server]
   component/Lifecycle
