@@ -3,11 +3,15 @@
   (:require [compojure.core :as compojure :refer (defroutes GET)]
             [oc.lib.proxy.sheets-chart :as sheets-chart]))
 
-(defn- sheets-chart-proxy [sheet-id request]
-  (sheets-chart/proxy-sheets (str "/spreadsheets/d/" sheet-id "/pubchart") (:query-params request)))
+(defn- chart-proxy [path params]
+  (sheets-chart/proxy-sheets-chart path params))
+
+(defn- sheets-proxy [path params]
+  (sheets-chart/proxy-sheets-pass-through path params))
 
 ;; ----- Routes -----
 
 (defn routes [sys]
   (compojure/routes
-    (GET "/spreadsheets/d/:sheet-id/pubchart" [sheet-id :as request] (sheets-chart-proxy sheet-id request))))
+    (GET ["/_/sheets-proxy/:path" :path #".*"] [path & params] (chart-proxy path params))
+    (GET ["/_/sheets-proxy-pass-through/:path" :path #".*"] [path & params] (sheets-proxy path params))))

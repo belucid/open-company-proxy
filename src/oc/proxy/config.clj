@@ -25,4 +25,4 @@
 ;; ----- HTTP server -----
 
 (defonce hot-reload (bool (or (env :hot-reload) false)))
-(defonce proxy-server-port (Integer/parseInt (or (env :port) "3007")))
+(defonce proxy-server-port (Integer/parseInt (or (env :port) "3005")))
