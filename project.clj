@@ -20,7 +20,7 @@
     [ring-logger-timbre "0.7.5"] ; Ring logging https://github.com/nberger/ring-logger-timbre
     [compojure "1.6.0-beta3"] ; Web routing https://github.com/weavejester/compojure
 
-    [open-company/lib "0.9.4-272e2d2"]] ; Library for OC projects https://github.com/open-company/open-company-lib
+    [open-company/lib "0.9.4-bd36899"]] ; Library for OC projects https://github.com/open-company/open-company-lib
     ; In addition to common functions, brings in the following common dependencies used by this project:
     ; Component - Component Lifecycle https://github.com/stuartsierra/component
     ; Timbre - Pure Clojure/Script logging library https://github.com/ptaoussanis/timbre
