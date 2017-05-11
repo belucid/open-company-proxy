@@ -35,7 +35,7 @@ to extract and format the chart from the HTML response and to deal with
 
 ## Local Setup
 
-Users of the [OpenCompany](https://opencompany.com/) platform should get started by going to [OpenCompany](https://opencompany.com/). The following local setup is **for developers** wanting to work on the platform's Bot software.
+Users of the [OpenCompany](https://opencompany.com/) platform should get started by going to [OpenCompany](https://opencompany.com/). The following local setup is **for developers** wanting to work on the platform's Proxy Service software.
 
 Most of the dependencies are internal, meaning [Leiningen](https://github.com/technomancy/leiningen) will handle getting them for you. There are a few exceptions:
 
@@ -78,9 +78,9 @@ Or start a REPL with: `lein repl`
 
 ## Testing
 
-Tests are run in continuous integration of the `master` and `mainline` branches on [Travis CI](https://travis-ci.org/open-company/open-company-bot):
+Tests are run in continuous integration of the `master` and `mainline` branches on [Travis CI](https://travis-ci.org/open-company/open-company-proxy):
 
-[![Build Status](https://travis-ci.org/open-company/open-company-bot.svg?branch=master)](https://travis-ci.org/open-company/open-company-bot)
+[![Build Status](https://travis-ci.org/open-company/open-company-proxy.svg?branch=master)](https://travis-ci.org/open-company/open-company-proxy)
 
 To run the tests locally:
 
