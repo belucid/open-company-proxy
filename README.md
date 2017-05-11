@@ -64,8 +64,8 @@ Leiningen is easy to install:
 Then let Leiningen install the rest of the dependencies:
 
 ```console
-git clone https://github.com/open-company/open-company-bot.git
-cd open-company-bot
+git clone https://github.com/open-company/open-company-proxy.git
+cd open-company-proxy
 lein deps
 
 
