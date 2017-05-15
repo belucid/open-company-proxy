@@ -13,5 +13,6 @@
 
 (defn routes [sys]
   (compojure/routes
+    (GET "/_/sheets-proxy/ping" [] {:body "OpenCompany Proxy Service: OK" :status 200}) ; Up-time monitor
     (GET ["/_/sheets-proxy/:path" :path #".*"] [path & params] (chart-proxy path params))
     (GET ["/_/sheets-proxy-pass-through/:path" :path #".*"] [path & params] (sheets-proxy path params))))
