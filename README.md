@@ -67,7 +67,7 @@ Then let Leiningen install the rest of the dependencies:
 git clone https://github.com/open-company/open-company-proxy.git
 cd open-company-proxy
 lein deps
-
+```
 
 ## Usage
 
@@ -92,7 +92,7 @@ lean eastwood
 
 ## Participation
 
-Please note that this project is released with a [Contributor Code of Conduct](https://github.com/open-company/open-company-api/blob/mainline/CODE-OF-CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/open-company/developer-onboarding/blob/master/CODE-OF-CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 
 ## License
