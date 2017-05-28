@@ -6,8 +6,8 @@
     :url "http://www.mozilla.org/MPL/2.0/"
   }
 
-  :min-lein-version "2.5.1" ; highest version supported by Travis-CI as of 1/28/2016
-
+  :min-lein-version "2.7.1"
+  
   ;; JVM memory
   :jvm-opts ^:replace ["-Xms256m" "-Xmx2048m" "-server"]
 
