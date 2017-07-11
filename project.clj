@@ -1,6 +1,6 @@
 (defproject open-company-proxy "0.1.0-SNAPSHOT"
   :description "OpenCompany Proxy Service"
-  :url "https://opencompany.com/"
+  :url "https://github.com/open-company/open-company-proxy"
   :license {
     :name "Mozilla Public License v2.0"
     :url "http://www.mozilla.org/MPL/2.0/"
