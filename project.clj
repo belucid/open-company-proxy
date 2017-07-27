@@ -15,12 +15,12 @@
   :dependencies [
     [org.clojure/clojure "1.9.0-alpha17"] ; Lisp on the JVM http://clojure.org/documentation
     [http-kit "2.3.0-alpha2"] ; Web server http://http-kit.org/
-    [ring/ring-devel "1.6.1"] ; Web application library https://github.com/ring-clojure/ring
-    [ring/ring-core "1.6.1"] ; Web application library https://github.com/ring-clojure/ring
+    [ring/ring-devel "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
+    [ring/ring-core "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
     [ring-logger-timbre "0.7.5"] ; Ring logging https://github.com/nberger/ring-logger-timbre
     [compojure "1.6.0"] ; Web routing https://github.com/weavejester/compojure
 
-    [open-company/lib "0.11.14"]] ; Library for OC projects https://github.com/open-company/open-company-lib
+    [open-company/lib "0.11.15"]] ; Library for OC projects https://github.com/open-company/open-company-lib
     ; In addition to common functions, brings in the following common dependencies used by this project:
     ; Component - Component Lifecycle https://github.com/stuartsierra/component
     ; Timbre - Pure Clojure/Script logging library https://github.com/ptaoussanis/timbre
@@ -42,7 +42,7 @@
       }
       :plugins [
         [jonase/eastwood "0.2.4"] ; Linter https://github.com/jonase/eastwood
-        [lein-kibit "0.1.5"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
+        [lein-kibit "0.1.6-beta1"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
       ]
     }
 
