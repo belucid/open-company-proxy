@@ -13,14 +13,14 @@
 
   ;; All profile dependencies
   :dependencies [
-    [org.clojure/clojure "1.9.0-alpha17"] ; Lisp on the JVM http://clojure.org/documentation
-    [http-kit "2.3.0-alpha2"] ; Web server http://http-kit.org/
+    [org.clojure/clojure "1.9.0-alpha19"] ; Lisp on the JVM http://clojure.org/documentation
+    [http-kit "2.3.0-alpha3"] ; Web server http://http-kit.org/
     [ring/ring-devel "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
     [ring/ring-core "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
     [ring-logger-timbre "0.7.5"] ; Ring logging https://github.com/nberger/ring-logger-timbre
     [compojure "1.6.0"] ; Web routing https://github.com/weavejester/compojure
 
-    [open-company/lib "0.12.4"]] ; Library for OC projects https://github.com/open-company/open-company-lib
+    [open-company/lib "0.12.15"]] ; Library for OC projects https://github.com/open-company/open-company-lib
     ; In addition to common functions, brings in the following common dependencies used by this project:
     ; Component - Component Lifecycle https://github.com/stuartsierra/component
     ; Timbre - Pure Clojure/Script logging library https://github.com/ptaoussanis/timbre
@@ -29,7 +29,7 @@
 
   ;; All profile plugins
   :plugins [
-    [lein-ring "0.12.0"] ; Common ring tasks https://github.com/weavejester/lein-ring
+    [lein-ring "0.12.1"] ; Common ring tasks https://github.com/weavejester/lein-ring
     [lein-environ "1.1.0"] ; Get environment settings from different sources https://github.com/weavejester/environ
   ]
 
