@@ -13,19 +13,31 @@
 
   ;; All profile dependencies
   :dependencies [
-    [org.clojure/clojure "1.9.0-alpha20"] ; Lisp on the JVM http://clojure.org/documentation
-    [http-kit "2.3.0-alpha4"] ; Web server http://http-kit.org/
-    [ring/ring-devel "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
-    [ring/ring-core "1.6.2"] ; Web application library https://github.com/ring-clojure/ring
-    [ring-logger-timbre "0.7.5"] ; Ring logging https://github.com/nberger/ring-logger-timbre
-    [compojure "1.6.0"] ; Web routing https://github.com/weavejester/compojure
+    ;; Lisp on the JVM http://clojure.org/documentation
+    [org.clojure/clojure "1.9.0-beta1"]
+    ;; Web server http://http-kit.org/
+    [http-kit "2.3.0-alpha4"]
+    ;; Web application library https://github.com/ring-clojure/ring
+    [ring/ring-devel "1.6.2"]
+    ;; Web application library https://github.com/ring-clojure/ring
+    ;; NB: clj-time pulled in by oc.lib
+    ;; NB: joda-time pulled in by oc.lib via clj-time
+    ;; NB: commons-codec pulled in by oc.lib
+    [ring/ring-core "1.6.2" :exclusions [clj-time joda-time commons-codec]]
+    ;; Ring logging https://github.com/nberger/ring-logger-timbre
+    ;; NB: com.taoensso/encore pulled in by oc.lib
+    ;; NB: com.taoensso/timbre pulled in by oc.lib
+    [ring-logger-timbre "0.7.5" :exclusions [com.taoensso/encore com.taoensso/timbre]] 
+    ;; Web routing https://github.com/weavejester/compojure
+    [compojure "1.6.0"]
 
-    [open-company/lib "0.12.19"]] ; Library for OC projects https://github.com/open-company/open-company-lib
-    ; In addition to common functions, brings in the following common dependencies used by this project:
-    ; Component - Component Lifecycle https://github.com/stuartsierra/component
-    ; Timbre - Pure Clojure/Script logging library https://github.com/ptaoussanis/timbre
-    ; Raven - Interface to Sentry error reporting https://github.com/sethtrain/raven-clj
-    ; environ - Get environment settings from different sources https://github.com/weavejester/environ
+    ;; Library for OC projects https://github.com/open-company/open-company-lib
+    [open-company/lib "0.14.4"]]
+    ;; In addition to common functions, brings in the following common dependencies used by this project:
+    ;; Component - Component Lifecycle https://github.com/stuartsierra/component
+    ;; Timbre - Pure Clojure/Script logging library https://github.com/ptaoussanis/timbre
+    ;; Raven - Interface to Sentry error reporting https://github.com/sethtrain/raven-clj
+    ;; environ - Get environment settings from different sources https://github.com/weavejester/environ
 
   ;; All profile plugins
   :plugins [
@@ -41,8 +53,10 @@
         :hot-reload "false"
       }
       :plugins [
-        [jonase/eastwood "0.2.4"] ; Linter https://github.com/jonase/eastwood
-        [lein-kibit "0.1.6-beta2"] ; Static code search for non-idiomatic code https://github.com/jonase/kibit
+        ;; Linter https://github.com/jonase/eastwood
+        [jonase/eastwood "0.2.4"]
+        ;; Static code search for non-idiomatic code https://github.com/jonase/kibit        
+        [lein-kibit "0.1.6-beta2" :exclusions [org.clojure/clojure]]
       ]
     }
 
@@ -52,13 +66,19 @@
         :hot-reload "true" ; reload code when changed on the file system
       }
       :plugins [
-        [lein-bikeshed "0.4.1"] ; Check for code smells https://github.com/dakrone/lein-bikeshed
-        [lein-checkall "0.1.1"] ; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
-        [lein-pprint "1.1.2"] ; pretty-print the lein project map https://github.com/technomancy/leiningen/tree/master/lein-pprint
-        [lein-ancient "0.6.10"] ; Check for outdated dependencies https://github.com/xsc/lein-ancient
-        [lein-spell "0.1.0"] ; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
-        [lein-deps-tree "0.1.2"] ; Print a tree of project dependencies https://github.com/the-kenny/lein-deps-tree
-        [venantius/yagni "0.1.4"] ; Dead code finder https://github.com/venantius/yagni
+        ;; Check for code smells https://github.com/dakrone/lein-bikeshed
+        ;; NB: org.clojure/tools.cli is pulled in by lein-kibit
+        [lein-bikeshed "0.4.1" :exclusions [org.clojure/tools.cli]] 
+        ;; Runs bikeshed, kibit and eastwood https://github.com/itang/lein-checkall
+        [lein-checkall "0.1.1"]
+        ;; pretty-print the lein project map https://github.com/technomancy/leiningen/tree/master/lein-pprint
+        [lein-pprint "1.1.2"]
+        ;; Check for outdated dependencies https://github.com/xsc/lein-ancient
+        [lein-ancient "0.6.12"]
+        ;; Catch spelling mistakes in docs and docstrings https://github.com/cldwalker/lein-spell
+        [lein-spell "0.1.0"]
+        ;; Dead code finder https://github.com/venantius/yagni
+        [venantius/yagni "0.1.4" :exclusions [org.clojure/clojure]]
       ]  
     }]
     :repl-config [:dev {
